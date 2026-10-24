@@ -12,19 +12,8 @@ jobs:
       fail-fast: false
       matrix:
         config:
-        - name: Windows (2.2074)
-          os: windows-latest
-        - name: Android32 (2.2074)
-          os: ubuntu-latest
-          target: Android32
-        - name: Android64 (2.2074)
-          os: ubuntu-latest
-          target: Android64
         - name: macOS (2.2074)
           os: macos-latest
-        - name: iOS (2.2074)
-          os: macos-latest
-          target: iOS        
 
     name: ${{ matrix.config.name }}
     runs-on: ${{ matrix.config.os }}
